@@ -1,13 +1,15 @@
 // ==UserScript==
-// @version      0.2
+// @version      0.24
 // @name         Magic PornHub
 // @namespace    https://github.com/magicoflolis
 // @author       Magic Of Lolis
 // @description  AIO tweaks for PornHub and PornHub Premium
 // @homepage	 https://twitter.com/for_lollipops
 // @homepageURL  https://twitter.com/for_lollipops
+// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/MagicPH.user.js
+// @downloadURL  https://github.com/magicoflolis/Arnoodle/raw/master/MagicPH.user.js
 // @supportURL   https://github.com/magicoflolis/Magic-PH/issues
-// @run-at document-start
+// @run-at 		 document-start
 // @connect      www.pornhubpremium.com
 // @include      *://*.pornhubpremium.com/*
 // @include      *://*.pornhub.com/*
@@ -15,8 +17,10 @@
 // @exclude      *://*.pornhub.com/
 // @require      https://code.jquery.com/jquery-latest.js
 // @resource CSS1 https://github.com/magicoflolis/Arnoodle/raw/master/generated-header.css
+// @resource CSS2 https://github.com/magicoflolis/Arnoodle/raw/master/header.css
 // @grant GM_setValue
 // @grant GM_getValue
+// @grant GM_deleteValue
 // @grant GM_getTab
 // @grant GM_getResourceURL
 // @grant GM_getResourceText
@@ -25,7 +29,9 @@
 // @grant unsafeWindow
 // ==/UserScript==
 setTimeout(function() {
-	GM_addStyle(GM_getResourceText('CSS1'));
+	// GM_addStyle(GM_getResourceText('CSS1'));
+	GM_addStyle(GM_getResourceText('CSS2'));
+	GM_deleteValue('js-networkBar');
 	console.clear();
 	console.log('Magic PornHub AIO loaded...');
 	var res = document.querySelectorAll(
