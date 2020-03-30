@@ -2,9 +2,15 @@
 
 
 #backgroundLayer,
-div.footerContentWrapper.style.display = 'block;',
-div.js-networkBar.style.display = 'block;',
-div.networkBar.style.display = 'block;',
+.footerContentWrapper {
+	display: block;
+}
+.js-networkBar {
+	display: block;
+}
+.networkBar {
+	display: block;
+}
 
 .ie10
 	#main-container
