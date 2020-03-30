@@ -2,7 +2,7 @@
 
 .ie10
 	#main-container
-	#player.original.mainPlayerDiv.wide
+	.player.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
@@ -11,7 +11,7 @@
 	.tab-menu-item,
 .ie8
 	#main-container
-	#player.original.mainPlayerDiv.wide
+	.player.wide.player.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
@@ -20,7 +20,7 @@
 	.tab-menu-item,
 .ie9
 	#main-container
-	#player.original.mainPlayerDiv.wide
+	.player.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
@@ -31,7 +31,7 @@
 }
 .ie7
 	#main-container
-	#player.original.mainPlayerDiv.wide
+	.player.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
@@ -43,7 +43,7 @@
 }
 .ie10
 	#main-container
-	#player.original.mainPlayerDiv.wide
+	.player.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
