@@ -2,14 +2,14 @@
 
 
 #backgroundLayer,
-.footerContentWrapper {
-	display: block;
+#footer {
+	display: none;
 }
 .js-networkBar {
-	display: block;
+	display: none;
 }
 .networkBar {
-	display: block;
+	display: none;
 }
 
 .ie10
