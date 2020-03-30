@@ -103,7 +103,8 @@ body.ageModalUk .containerMTubes.ageModal-uk {
 	(-ms-filter: blur(25px)) or (-o-filter: blur(25px)) or
 	(-moz-filter: blur(25px)) {
 	body.ageModalUk #backgroundLayer,
-	body.ageModalUk .footerContentWrapper,
+	body.ageModalUk .footerContentWrapper.style.display = 'block;',
+	body.ageModalUk .js-networkBar.style.display = 'block;',
 	body.ageModalUk .networkBar.style.display = 'block;',
 	body.ageModalUk .wrapper {
 		-moz-filter: blur(25px);
