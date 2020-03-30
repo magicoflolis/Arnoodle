@@ -1,5 +1,11 @@
 /** @format */
 
+
+#backgroundLayer,
+div.footerContentWrapper.style.display = 'block;',
+div.js-networkBar.style.display = 'block;',
+div.networkBar.style.display = 'block;',
+
 .ie10
 	#main-container
 	#player.original.mainPlayerDiv.wide
