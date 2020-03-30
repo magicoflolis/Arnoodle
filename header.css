@@ -147,3 +147,5 @@ body.ageModalUk .containerMTubes.ageModal-uk {
 		background-color: rgba(0, 0, 0, 0.75);
 	}
 }
+
+.footerContentWrapper {display: none;}
