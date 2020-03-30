@@ -1,0 +1,110 @@
+/** @format */
+
+.ie10
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item,
+.ie8
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item,
+.ie9
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item {
+	display: inline-block;
+}
+.ie7
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item {
+	float: left;
+	margin-right: 10px;
+}
+.ie10
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item,
+.ie8
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item,
+.ie9
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item {
+	display: inline-block;
+}
+.ie7
+	#main-container
+	.video-wrapper #player.wide
+	.video-actions-menu
+	.tab-menu-wrapper-table
+	.tab-menu-wrapper-row
+	.tab-menu-wrapper-cell
+	.tab-menu-item {
+	float: left;
+	margin-right: 10px;
+}
+html.supportsGridLayout.fluidContainer .networkBar {
+	min-width: 991px;
+	max-width: 1323px;
+	width: 96%;
+	margin: 0 auto;
+	display: none;
+}
+html.supportsGridLayout.fluidContainer .networkBar {
+	min-width: 991px;
+	max-width: 1323px;
+	width: 96%;
+	margin: 0 auto;
+	display: none;
+}
+body.ageModalUk .containerMTubes.ageModal-uk {
+	background-color: #000;
+}
+@supports (filter: blur(25px)) or (-webkit-filter: blur(25px)) or
+	(-ms-filter: blur(25px)) or (-o-filter: blur(25px)) or
+	(-moz-filter: blur(25px)) {
+	body.ageModalUk #backgroundLayer,
+	body.ageModalUk .footerContentWrapper,
+	body.ageModalUk .networkBar.style.display = 'block;',
+	body.ageModalUk .wrapper {
+		-moz-filter: blur(25px);
+		-o-filter: blur(25px);
+		-ms-filter: blur(25px);
+		-webkit-filter: blur(25px);
+		filter: blur(25px);
+	}
+	body.ageModalUk .containerMTubes.ageModal-uk {
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+}

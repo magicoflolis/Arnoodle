@@ -21738,7 +21738,15 @@ div.green-bar {
 	clear: both;
 	height: 18px;
 }
+#main-container #hd-rightColVideoPage .recommendedFor {
+    display: block;
+	margin-top: 3.5px;
+}
 @media only screen and (min-width: 1350px) {
+	#main-container #hd-rightColVideoPage .recommendedFor {
+        display: block;
+		margin-top: 5px;
+	}
 }
 .bar-right {
 	color: #999;
