@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version      0.24
+// @version      0.26
 // @name         Magic PornHub
 // @namespace    https://github.com/magicoflolis
 // @author       Magic Of Lolis
