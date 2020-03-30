@@ -43,7 +43,6 @@
 }
 .ie10
 	#main-container
-	#player.original.mainPlayerDiv.wide
 	.video-wrapper #player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
@@ -96,6 +95,7 @@ html.supportsGridLayout.fluidContainer .networkBar {
 	margin: 0 auto;
 	display: none;
 }
+#player.original.mainPlayerDiv.wide
 body.ageModalUk .containerMTubes.ageModal-uk {
 	background-color: #000;
 }
