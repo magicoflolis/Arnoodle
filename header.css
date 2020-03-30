@@ -11,6 +11,24 @@
 .networkBar {
 	display: none;
 }
+html.supportsGridLayout .footerContentWrapper {
+	display: none;
+}
+html.supportsGridLayout .footerContentWrapper #footer .footerContent {
+	display: none;
+}
+html.supportsGridLayout .footerContentWrapper .footer {
+	display: none;
+}
+html.supportsGridLayout .footerContentWrapper .footer-title {
+	display: none;
+}
+html.supportsGridLayout .footerContentWrapper .languageWrapper {
+	display: none;
+}
+html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
+	display: none;
+}
 
 .ie10
 	#main-container
