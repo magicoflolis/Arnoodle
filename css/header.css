@@ -1,39 +1,16 @@
-/** @format */
-
-
 #backgroundLayer,
-#footer {
-	display: none;
-}
 .js-networkBar {
 	display: none;
 }
 .networkBar {
 	display: none;
 }
-html.supportsGridLayout .footerContentWrapper {
-	display: none;
-}
-html.supportsGridLayout .footerContentWrapper #footer .footerContent {
-	display: none;
-}
-html.supportsGridLayout .footerContentWrapper .footer {
-	display: none;
-}
-html.supportsGridLayout .footerContentWrapper .footer-title {
-	display: none;
-}
-html.supportsGridLayout .footerContentWrapper .languageWrapper {
-	display: none;
-}
-html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
-	display: none;
-}
 
 .ie10
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -42,7 +19,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie8
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -51,7 +29,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie9
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -62,7 +41,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie7
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -73,7 +53,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 }
 .ie10
 	#main-container
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -82,7 +63,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie8
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -91,7 +73,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie9
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -102,7 +85,8 @@ html.supportsGridLayout .footerContentWrapper .logoFooterWrapper {
 .ie7
 	#main-container
 	#player.original.mainPlayerDiv.wide
-	.video-wrapper #player.wide
+	.video-wrapper
+	#player.wide
 	.video-actions-menu
 	.tab-menu-wrapper-table
 	.tab-menu-wrapper-row
@@ -126,7 +110,8 @@ html.supportsGridLayout.fluidContainer .networkBar {
 	display: none;
 }
 #player.original.mainPlayerDiv.wide
-body.ageModalUk .containerMTubes.ageModal-uk {
+	body.ageModalUk
+	.containerMTubes.ageModal-uk {
 	background-color: #000;
 }
 @supports (filter: blur(25px)) or (-webkit-filter: blur(25px)) or
@@ -147,5 +132,6 @@ body.ageModalUk .containerMTubes.ageModal-uk {
 		background-color: rgba(0, 0, 0, 0.75);
 	}
 }
-
-.footerContentWrapper {display: none;}
+.footerContentWrapper {
+	display: none;
+}

@@ -15,7 +15,7 @@
 // @include      *://*.pornhub.com/*
 // @exclude      *://*.pornhubpremium.com/
 // @exclude      *://*.pornhub.com/
-// @require      https://code.jquery.com/jquery-latest.js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // @resource CSS1 https://github.com/magicoflolis/Arnoodle/raw/master/generated-header.css
 // @resource CSS2 https://github.com/magicoflolis/Arnoodle/raw/master/header.css
 // @grant GM_setValue
@@ -29,11 +29,11 @@
 // @grant unsafeWindow
 // ==/UserScript==
 setTimeout(function() {
-	// GM_addStyle(GM_getResourceText('CSS1'));
-	GM_addStyle(GM_getResourceText('CSS2'));
-	GM_deleteValue('js-networkBar');
+	GM_addStyle(GM_getResourceText('CSS1'));
+	// GM_addStyle(GM_getResourceText('CSS2'));
 	console.clear();
 	console.log('Magic PornHub AIO loaded...');
+	// GM_deleteValue('js-networkBar');
 	var res = document.querySelectorAll(
 		'ul.mhp1138_quality.mhp1138_optionsList > li'
 	);
@@ -94,14 +94,15 @@ setTimeout(function() {
 			console.log('Cleaning Webpage');
 			localStorage.setItem('player_quality', '{"quality":"1080"}');
 			localStorage.setItem('player_adaptive', '{"hlsLevel":1}');
-			// document.querySelector('div#js-networkBar.networkBar').setAttribute("style", "display: none;")
-			// hdR.setAttribute("style", "display:none")
-			// foot.setAttribute("style", "display:none")
-			// document.querySelector('div#vpContentContainer').setAttribute('style', 'width:125.5%;')
-			// hdL.setAttribute('style', 'width:134%;')
-			// full.setAttribute('class', 'mhp1138_active')
-			// quality[1].setAttribute("style", "display:none")
-			// quality[2].setAttribute("style", "display:none")
+			hdR.setAttribute('style', 'display:none');
+			foot.setAttribute('style', 'display:none');
+			document
+				.querySelector('div#vpContentContainer')
+				.setAttribute('style', 'width:125.5%;');
+			hdL.setAttribute('style', 'width:134%;');
+			full.setAttribute('class', 'mhp1138_active');
+			quality[1].setAttribute('style', 'display:none');
+			quality[2].setAttribute('style', 'display:none');
 			PDown.setAttribute('style', 'width:100%;');
 			// document.getElementById("player").classList.add("wide")
 			// localStorage.setItem('player_quality', '{"quality":"1080"}')
