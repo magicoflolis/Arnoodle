@@ -1,137 +1,171 @@
 // ==UserScript==
-// @version      0.26
-// @name         Magic PornHub
-// @namespace    https://github.com/magicoflolis
-// @author       Magic Of Lolis
+// @run-at	 document-end
+// @version      2.123
+// @name         Magic PH
+// @author       Magic Of Lolis <magicoflolis@gmail.com> https://magicoflolis.github.io/Arnoodle
 // @description  AIO tweaks for PornHub and PornHub Premium
-// @homepage	 https://twitter.com/for_lollipops
-// @homepageURL  https://twitter.com/for_lollipops
-// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/MagicPH.user.js
+// @homepage	 https://magicoflolis.github.io/Arnoodle
+// @homepageURL  https://magicoflolis.github.io/Arnoodle
 // @downloadURL  https://github.com/magicoflolis/Arnoodle/raw/master/MagicPH.user.js
-// @supportURL   https://github.com/magicoflolis/Magic-PH/issues
-// @run-at 		 document-start
-// @connect      www.pornhubpremium.com
+// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/MagicPH.user.js
+// @supportURL   https://github.com/magicoflolis/Arnoodle/issues
 // @include      *://*.pornhubpremium.com/*
 // @include      *://*.pornhub.com/*
-// @exclude      *://*.pornhubpremium.com/
-// @exclude      *://*.pornhub.com/
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
-// @resource CSS1 https://github.com/magicoflolis/Arnoodle/raw/master/generated-header.css
-// @resource CSS2 https://github.com/magicoflolis/Arnoodle/raw/master/header.css
-// @grant GM_setValue
-// @grant GM_getValue
-// @grant GM_deleteValue
-// @grant GM_getTab
-// @grant GM_getResourceURL
-// @grant GM_getResourceText
-// @grant GM_xmlhttpRequest
-// @grant GM_addStyle
-// @grant unsafeWindow
+// @include		 file://*
+// @include		 about:blank
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+// @grant        none
 // ==/UserScript==
+
+//$('').remove();
+// https://www.pornhub.com/view_video.php?viewkey=ph5e7ebbda1db25
+// https://www.pornhubpremium.com/view_video.php?viewkey=ph5e7ebbda1db25
+
 setTimeout(function() {
-	GM_addStyle(GM_getResourceText('CSS1'));
-	// GM_addStyle(GM_getResourceText('CSS2'));
-	console.clear();
-	console.log('Magic PornHub AIO loaded...');
-	// GM_deleteValue('js-networkBar');
-	var res = document.querySelectorAll(
-		'ul.mhp1138_quality.mhp1138_optionsList > li'
-	);
-	var url = location.href;
-	var host = location.hostname;
-	var path = location.pathname;
-	var rect = document.getElementById('main-container').getBoundingClientRect();
-	var body = document.querySelector('body');
-	var lout = document.querySelector('body.logged-out');
-	var foot = document.querySelector('div.footerContentWrapper');
-	var full = document.querySelector('mhp1138_front > mhp1138_cinema');
-	var hdR = document.querySelector('#hd-rightColVideoPage');
-	var hdL = document.querySelector('#hd-leftColVideoPage');
-	var PDown = document.getElementById('js-shareData');
-	var playlist = document.getElementById('under-player-playlists');
-	var newParent = document.querySelector('div.wrapper.hd');
-	var oldParent = document.querySelector('div.container');
-	if (ad_player_id) {
-		console.log('PORNHUB Downloader : Found video ID:' + ad_player_id);
-		var v = window['flashvars_' + ad_player_id];
-		console.log(
-			"PORNHUB Downloader : Try to find variable named 'flashvars_" +
-				ad_player_id +
-				"'"
-		);
-		var a = Object.values(v);
-		a.forEach(function(entry) {
-			var box = document.querySelector('.tab-menu-wrapper-row');
-			if (entry.length >= 20) {
-				var c = entry.indexOf('.mp4');
-				if (c != '-1') {
-					var f = false;
-					if (entry.indexOf('2160P') != '-1') f = '2160P';
-					else if (entry.indexOf('1440P') != '-1') f = '1440P';
-					else if (entry.indexOf('1080P') != '-1') f = '1080P';
-					else if (entry.indexOf('720P') != '-1') f = '720P';
-					else if (entry.indexOf('480P') != '-1') f = '480P';
-					else if (entry.indexOf('240P') != '-1') f = '240P';
-					else f = false;
-					if (f !== false)
-						box.innerHTML +=
-							'<div class="tab-menu-wrapper-cell"><a class="tab-menu-item tooltipTrig" data-tab="download-tab" target="_blank" href="' +
-							entry +
-							'" data-title="Download at ' +
-							f +
-							'"><i class="main-sprite-dark-2"></i><span>In ' +
-							f +
-							'</span></a></div>';
-				}
-			}
-		});
+	console.clear()
+	console.log('[Magic PH] Loading...')
+	// var url = window.location.href
+	var host = window.location.hostname
+	var path = window.location.pathname
+	var lS = window.localStorage
+	var PHP = document.querySelector('.premiumUser');
+	var bodyI = document.querySelector('body');
+	var bodyO = document.querySelector('body.logged-out');
+	var rect = document.querySelector('.container  ').getBoundingClientRect()
+	// Header Menu
+	$('.networkBar').remove();
+	$('#pornportal-wrapper').remove();
+	$('#welcome').remove();
+	$('.modalWrapper').remove();
+	$('.livesex').remove();
+	$('.realsex').remove();
+	$('.trendingWrapper').remove();
+	$('.popularFilterPornstar').remove();
+	$('.popularSearches').remove();
+	$('.popularSearchIcon').remove();
+	//$('.popularFilters').remove();
+	//$('.optionalHeaderSubMenu:nth-child(5)').remove();
+	//$('.leftPanel > p').remove();
+	$('ul.headerSubMenu > li.omega').prependTo('ul.headerSubMenu');
+	$('#menuItem2 > a[href^="/video"]').attr('href','/video?o=tr&t=t&hd=1');
+	$('#menuItem3 > a[href="/categories"]').attr('href','/categories?o=al');
+	$('#menuItem5 > a[href^="/pornstars"]').attr('href','/pornstars?performerType=pornstar');
+	$('#menuItem7 > a[href^="/community"]').attr('href','/user/discover/popular_verified_members');
+	$('#menuItem8 > a[href^="/albums"]').attr('href','/gifs');
+	// /albums /albums/female-straight-uncategorized?o=tr&t=t
+	// Body
+	$('a[href*="javascript:signinbox"]').remove();
+	$('button.tooltipTrig.open-playlist-link.playlist-trigger').remove();
+	$('.footerContentWrapper').remove();
+	// Default PH 
+	if( $('#headerSearchWrapperFree').length ) {
+		 console.log('[Magic PH] Found Pornhub.')
+		 $('a[data-entrycode="DiscoverPremium"]').remove();
+		 $('.headerBtnsWrapper').remove();
+		 $('.communityMenuTop').remove();
+		 $('.feedSideBar > section:nth-child(1)').remove();
+		 // PH Video Page
+		 if (path == '/view_video.php') {
+			  console.log('Detected Video Page')
+			  $('.tab-menu-wrapper-row > .tab-menu-wrapper-cell:nth-child(2)').remove();
+			  $('.alpha.videoBox.videoblock.js-pop.pcVideoListItem').remove();
+			  $('#p2vVideosVPage').remove();
+			  $('.favorites-message').remove();
+			  $('.mhp1138_upsell').remove();
+			  $('#under-player-playlists').remove();
+			  $('.streamatesModelsContainer').remove();
+			  $('.js-commentReplacement').remove();
+			  $('.active.fanclub-info-pop').remove();
+			  $('.show-more-btn').prependTo('.userButtons');
+			  $('#vpContentContainer').attr('style','display: unset !important;');
+			  $('#hd-leftColVideoPage').attr('style','width: 80vw !important;  position: unset !important; margin-left: -250px !important;');
+			  $('.video-wrapper').attr('style','width: 80vw !important;  position: unset !important;');
+			  $('#player').attr('style','width: 95vw !important;');
+			  $('.video-wrapper.js-relatedRecommended').attr('class','video-info-row showLess');
+			  $('#relatedVideosVPage').appendTo('#hd-leftColVideoPage > div:nth-child(2)');
+			  $('#hd-leftColVideoPage > div:nth-child(2)').attr('style','display: none;');
+			  if( $('.logged-out').length ) {
+				   $('.loggedOut.inline-block.subscribeButton > .buttonBase').remove();
+				   $('.loggedOut.smallButton.inline-block.subscribeButton > .buttonBase').remove();
+				   $('.votes-fav-wrap').remove();
+				   $('span.subscribers-count').remove();
+				   $('#votes-fav-wrap').remove();
+				   $('.js-paidDownload').remove();
+				   $('.tab-menu-wrapper-row > .tab-menu-wrapper-cell:nth-child(2)').remove();
+				   $('.tab-menu-wrapper-row > .tab-menu-wrapper-cell:nth-child(2)').remove();
+				   // $('.tab-menu-wrapper-row > .tab-menu-wrapper-cell:nth-child(3)').remove();
+				   // $('.tab-menu-wrapper-row > .tab-menu-wrapper-cell:nth-child(4)').remove();
+				   // $('[data-tab="download-tab"]').remove();
+				   // $('[data-tab="share-tab"]').remove();
+				   // $('[data-tab="add-to-tab"]').remove();
+			  }
+			  lS.setItem('player_quality', '{"quality":"720"}')
+			  lS.setItem('player_quality', '{"quality":"1080"}')
+		 }
+		 if (path == '/') {
+			  $('.sectionWrapper:nth-child(3)').prependTo('.frontListingWrapper');
+			  $('#mostRecentVideosSection').remove();
+			  $('.sectionWrapper:nth-child(5) > .sectionTitle').remove();
+		 }
+		 if (path == '/video') {
+			  $('.buttonClass.light.greyButton').remove();
+			  $('#categoriesStraight').prependTo('.nf-categories-sidebar');
+			  $('.active.sidebarIndent').remove();
+			  //$('.sidebar_wrapper:nth-of-type(5)').remove();
+			  $('.section_bar_sidebar:nth-of-type(6)').remove();
+			  $('.section_bar_sidebar:nth-of-type(8)').remove();
+			  $('.section_bar_sidebar:nth-of-type(7)').prependTo('.nf-categories-sidebar');
+			  $('div.sidebar_wrapper:nth-of-type(7)').remove();
+		 }
+		 if (path == '/categories') {
+			  $('h1').remove();
+			  $('.buttonClass.light.greyButton').remove();
+		 }
+	} else {
+		 // Premium PH
+		 if( $('.premiumUser').length ) {
+			  console.log('Switching To Premium!')
+			  $('#giftingEntry').remove();
+			  $('[data-tab="download-tab"]').remove();
+			  $('[data-tab="share-tab"]').remove();
+			  $('.tab-menu-wrapper-cell:nth-child(2)').remove();
+			  $('.tab-menu-wrapper-cell:nth-child(2)').remove();
+			  // Premium PH Home
+			  if (path == '/') {
+				   //alert("Text: " + $("a[href^=","]").text());
+				   var t1 = $('.feed_title > a').first().text();
+				   var t2 = t1.replace(/\s+/g, '');
+				   var sub = 'subscriptions';
+				   $.trim(t2);
+				   $('a[href^="/users/"]').attr('href','/users/'+t2+'/videos/favorites');
+				   $('.sectionWrapperPremium.feed_wrapper').prependTo('.container');
+				   $('.sectionWrapperPremium:nth-of-type(5)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(6)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(7)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(8)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(10)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(11)').hide();
+				   $('.sectionWrapperPremium:nth-of-type(12)').hide();
+				   $('.featuredNetwork > .sectionWrapperPremium').hide();
+				   $('.featuredChannel').hide();
+				   $('.sectionCarousel.sectionWrapper').remove();
+			  }
+			  // Premium PH Video Page
+			  if (path == '/view_video.php') {
+				   console.log('Cleaning Webpage')
+				   $('#cmtWrapper').remove();
+				   $('.tab-menu-wrapper-cell:nth-child(2)').remove();
+				   lS.setItem('player_quality', '{"quality":"1080"}')
+				   lS.setItem('player_quality', '{"quality":"1440"}')
+				   lS.setItem('player_quality', '{"quality":"2160"}')
+				   //lS.removeItem('watchedVideoIds')
+				   //lS.removeItem('watchedVideoStorage')
+			  }
+		 }
 	}
 	if (path == '/gif') {
-		document.getElementsByClassName('toggleGifWebmButton').click();
+		 $('toggleGifWebmButton').click();
 	}
-	if ((url = 'pornhub.com')) {
-		if (path == '/view_video.php') {
-			console.log('Cleaning Webpage');
-			localStorage.setItem('player_quality', '{"quality":"1080"}');
-			localStorage.setItem('player_adaptive', '{"hlsLevel":1}');
-			hdR.setAttribute('style', 'display:none');
-			foot.setAttribute('style', 'display:none');
-			document
-				.querySelector('div#vpContentContainer')
-				.setAttribute('style', 'width:125.5%;');
-			hdL.setAttribute('style', 'width:134%;');
-			full.setAttribute('class', 'mhp1138_active');
-			quality[1].setAttribute('style', 'display:none');
-			quality[2].setAttribute('style', 'display:none');
-			PDown.setAttribute('style', 'width:100%;');
-			// document.getElementById("player").classList.add("wide")
-			// localStorage.setItem('player_quality', '{"quality":"1080"}')
-			localStorage.setItem('player_adaptive', '{"hlsLevel":1}');
-			// localStorage.setItem("player_quality", '{"quality":"2160"}')
-			// playlist.setAttribute("style", "display:none")
-			if (body == lout) {
-				// document.querySelector('span.headerBtnsWrapper').setAttribute("style", "display:none")
-				// document.getElementById('topRightProfileMenu').setAttribute("style", "display:none")
-				// document.querySelector('div#cmtWrapper > h2').setAttribute("style", "display:none")
-				// document.querySelector('p.commentLogMessage').setAttribute("style", "display:none")
-				// document.querySelector('div.userButtons').setAttribute("style", "display:none")
-				// document.querySelector('span.subscribers-count').setAttribute("style", "display:none")
-				// document.querySelector('div.votes-fav-wrap').setAttribute("style", "display:none")
-				// document.querySelector('#headerSearchWrapperFree').setAttribute("style", "width:920px;")
-				// document.querySelector('div.tab-menu-wrapper-cell')[2].setAttribute("style", "display:none")
-				// document.querySelector('div.tab-menu-wrapper-cell')[3].setAttribute("style", "display:none")
-			}
-			window.scrollBy(rect.left, rect.top);
-		}
-	} else {
-		if (path == '/view_video.php') {
-			console.log('Switching To Premium');
-			// document.getElementById("player").classList.add("wide")
-			// document.getElementsByClassName("video-wrapper")[0].setAttribute("style", "width:max-content")
-			// document.getElementById("under-player-comments").setAttribute("style", "width:1325px;")
-			window.scrollBy(rect.left, rect.top);
-		}
-	}
-	localStorage.removeItem('watchedVideoIds');
-	localStorage.removeItem('watchedVideoStorage');
-}, 1000);
+	window.scrollBy(rect.left, rect.top)
+	console.log('[Magic PH] Loading Complete!')
+}, 1000)
