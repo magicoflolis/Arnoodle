@@ -1,13 +1,14 @@
 // ==UserScript==
 // @run-at 		 document-end
-// @version      2
-// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/Arnoodle.user.js
-// @name         W2G Test
+// @version      2.111
+// @name         W2G [BROKEN]
 // @author       Magic Of Lolis <magicoflolis@gmail.com> https://github.com/magicoflolis
-// @description  AIO tweaks for PornHub and PornHub Premium
-// @homepage	 https://twitter.com/for_lollipops
-// @homepageURL  https://twitter.com/for_lollipops
-// @supportURL   https://github.com/magicoflolis/Magic-PH/issues
+// @description  DO NOT INSTALL
+// @homepage	 https://magicoflolis.github.io/Arnoodle
+// @homepageURL  https://magicoflolis.github.io/Arnoodle
+// @downloadURL  https://github.com/magicoflolis/Arnoodle/raw/master/W2GTest.user.js
+// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/W2GTest.user.js
+// @supportURL   https://github.com/magicoflolis/Arnoodle/issues
 // @match        https://www.watch2gether.com/rooms/*
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
