@@ -125,7 +125,7 @@ $(function () {
 		var p = $('.thumb');
 		$.each(p, function (i) {
 			//p.attr('style','width: 500px !important; height 500px !important;');
-			p.attr('src','https://di.phncdn.com/videos/202003/17/293782711/thumbs_5/(m=eafTGgaaaa)(mh=M6TCuTi4ZzyAj9wC)1.jpg');
+			p.attr('src','https://github.com/magicoflolis/Arnoodle/blob/Beta/vidtemplate.jpg');
 		})
 		//$('#relateRecommendedItems').attr('class','video-info-row showLess')
 		$('.abovePlayer').remove();
