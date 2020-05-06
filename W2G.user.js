@@ -6,8 +6,8 @@
 // @description  DO NOT INSTALL
 // @homepage	 https://magicoflolis.github.io/Arnoodle
 // @homepageURL  https://magicoflolis.github.io/Arnoodle
-// @downloadURL  https://github.com/magicoflolis/Arnoodle/raw/master/W2GTest.user.js
-// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/W2GTest.user.js
+// @downloadURL  https://github.com/magicoflolis/Arnoodle/raw/master/W2G.user.js
+// @updateURL  	 https://github.com/magicoflolis/Arnoodle/raw/master/W2G.user.js
 // @supportURL   https://github.com/magicoflolis/Arnoodle/issues
 // @match        https://www.watch2gether.com/rooms/*
 // @grant        none
